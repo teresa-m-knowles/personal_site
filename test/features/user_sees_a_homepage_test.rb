@@ -9,9 +9,9 @@ class HomepageTest < CapybaraTestCase
   end
 
   def test_user_sees_an_error_if_page_does_not_exist
-    visit '/blog'
+    visit 'blog'
 
     assert_equal 404, page.status_code
-    assert page.has_content?("Error")
+    assert page.has_content?("Page not found")
   end
 end
